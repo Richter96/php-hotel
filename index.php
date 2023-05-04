@@ -39,7 +39,9 @@ $hotels = [
 
 ];
 
-echo "<pre>";
+
+// echo "<pre>";
+
 
 /* foreach ($hotels as $hotel) {
     // var_dump($hotel);
@@ -66,41 +68,29 @@ echo "<pre>";
 
 <body>
     <div class="container-md">
-        <div class="table-responsive">
-            <table class="table table-primary">
-                <thead>
-                    <tr>
-                        <?php foreach ($hotels[0] as $key => $value) : ?>
-                            <th scope="col"> <?= $key ?></th>
-                        <?php endforeach ?>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($hotels as $hotel) : ?>
-                        <tr class="">
-                            <?php foreach ($hotel as $key => $value) : ?>
-                                <td scope="row"> <?= $value ?></td>
-                            <?php endforeach ?>
-                        </tr>
-                    <?php endforeach ?>
-
-
-                </tbody>
-            </table>
+        <div class="check_parcheggio">
+            <form action="checkparking.php" class=" d-flex" method="GET">
+                <label for="parking">Serve il parcheggio</label>
+                <input type="radio" name="parking" id="parking">
+                <label for="voto">Insericsi il voto</label>
+                <select name="voto" id="voto">
+                    <option value="0">seleziona un valore</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
-    </div>
 
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
 
-
-
-
-
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-    </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
