@@ -64,8 +64,7 @@ echo ($voto);
 
 
 <body>
-    <div class="container-md">
-
+    <div class="container-md table_hotel">
         <div class="table-responsive">
             <table class="table table-primary">
                 <thead>
