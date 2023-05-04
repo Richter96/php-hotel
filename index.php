@@ -60,8 +60,9 @@ echo "<pre>";
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
 </head>
+
+
 
 <body>
     <div class="container-md">
@@ -75,12 +76,15 @@ echo "<pre>";
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="">
+                    <?php foreach ($hotels as $hotel) : ?>
+                        <tr class="">
+                            <?php foreach ($hotel as $key => $value) : ?>
+                                <td scope="row"> <?= $value ?></td>
+                            <?php endforeach ?>
+                        </tr>
+                    <?php endforeach ?>
 
-                        <td scope="row">R1C1</td>
-                        <td>R1C2</td>
-                        <td>R1C3</td>
-                    </tr>
+
                 </tbody>
             </table>
         </div>
