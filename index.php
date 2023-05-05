@@ -40,10 +40,10 @@ $hotels = [
 ];
 
 $parking = isset($_GET['parking']) ? true : false;
-$voto = $_GET['voto'];
+$voto = $_GET['voto'] ?? 'nobody';
 
-echo ($parking);
-echo ($voto);
+// echo ($parking);
+// echo ($voto);
 
 // echo "<pre>";
 
